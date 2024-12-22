@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="assets/img/google.png" />
     <style>
         body {
-            background-color: #4b0082; /* ダーク紫 */
+            background-color: #4b0082; /* ダークな紫色 */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -16,11 +16,11 @@
             align-items: center;
             height: 100vh;
             text-align: center;
+            color: white; /* 白色のテキスト */
         }
-
         .header-container {
             width: 80%;
-            max-width: 800px;
+            max-width: 1000px;
             background: rgba(255, 255, 255, 0.1); /* 半透明の背景 */
             padding: 40px 20px;
             border-radius: 15px;
@@ -30,68 +30,34 @@
             justify-content: center;
             align-items: center;
         }
-
         .header {
             margin: 0;
-            font-size: 64px; /* フォントサイズ調整 */
+            font-size: 72px;
             font-weight: bold;
-            color: #fff; /* 白色 */
+            color: #f3e5ab; /* 淡い黄色 */
         }
-
         .description {
-            font-size: 24px;
+            font-size: 30px;
             margin-top: 10px;
-            color: #fff; /* 白色 */
+            color: #f3e5ab;
         }
-
         .input {
             margin-top: 10px;
             padding: 20px;
             font-size: 24px;
             width: 100%;
-            max-width: 600px;
+            max-width: 1000px;
             border-radius: 8px;
             border: 2px solid #ccc;
             box-sizing: border-box;
             text-align: center;
             height: 60px;
-            background-color: #fff; /* 入力欄の背景 */
+            background-color: #333; /* ダークな入力フィールド */
+            color: white; /* 白色のテキスト */
         }
-
         .input::placeholder {
             color: #888;
-        }
-
-        /* タブスタイル */
-        .tabs {
-            display: flex;
-            margin-top: 20px;
-        }
-
-        .tab {
-            flex: 1;
-            padding: 10px;
-            cursor: pointer;
-            background-color: #6a0dad; /* 紫 */
-            color: white;
             text-align: center;
-            border-radius: 5px;
-            margin: 0 5px;
-            transition: background-color 0.3s;
-        }
-
-        .tab:hover {
-            background-color: #7a1b9b; /* ホバー時の色 */
-        }
-
-        .tab-content {
-            display: none;
-            margin-top: 20px;
-            color: #fff;
-        }
-
-        .active {
-            display: block;
         }
     </style>
 </head>
@@ -106,31 +72,11 @@
             name="search"
             placeholder="Search or enter a URL"
         />
-        <div class="tabs">
-            <div class="tab" onclick="showTab('tab1')">タブ 1</div>
-            <div class="tab" onclick="showTab('tab2')">タブ 2</div>
-            <div class="tab" onclick="showTab('tab3')">タブ 3</div>
-        </div>
-        <div id="tab1" class="tab-content active">タブ 1の内容</div>
-        <div id="tab2" class="tab-content">タブ 2の内容</div>
-        <div id="tab3" class="tab-content">タブ 3の内容</div>
     </div>
 
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>
     <script src="./assets/register-sw.js"></script>
     <script src="./assets/script.js" defer></script>
-    <script>
-        function showTab(tabId) {
-            // すべてのタブコンテンツを非表示にする
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            // 選択されたタブを表示する
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
 </body>
 </html>
