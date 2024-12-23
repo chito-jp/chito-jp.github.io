@@ -1,6 +1,6 @@
 
 self.__uv$config = {
-    prefix: '/service/',
+    prefix: '/Lightning-Proxy/service/',
 
     /* Bare server URL */ 
     bare: 'https://bare.electrial.site',
