@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/google.png" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #4b0082; /* ダークな紫色 */
+            height: 100%;
+        }
+        iframe {
+            position: absolute;
+            top: 50px; /* タブの高さ分だけ下にずらす */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: calc(100% - 50px); /* タブの高さを考慮 */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe name="iframe_name" src="server.html" width="100%" height="100%"></iframe>
+</body>
+</html>
