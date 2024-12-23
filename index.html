@@ -13,29 +13,6 @@
             background-color: #4b0082; /* ダークな紫色 */
             height: 100%;
         }
-        /* タブバーのスタイル */
-        #tabs-container {
-            display: flex;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            border-bottom: 2px solid #ccc;
-        }
-        .tab {
-            padding: 10px;
-            cursor: pointer;
-            margin-right: 10px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            color: white;
-        }
-        .tab.active {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-        .close-tab-button {
-            margin-left: 5px;
-            cursor: pointer;
-            color: red;
-        }
         iframe {
             position: absolute;
             top: 50px; /* タブの高さ分だけ下にずらす */
@@ -49,12 +26,7 @@
     </style>
 </head>
 <body>
-    <div id="tabs-container">
-        <div id="add-tab">+</div> <!-- タブ追加ボタン -->
-    </div>
     <iframe name="iframe_name" src="server.html" width="100%" height="100%"></iframe>
-
-    <script src="./assets/tab.js"></script> <!-- タブ機能のJS -->
 </body>
 </html>
 
