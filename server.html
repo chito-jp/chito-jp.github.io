@@ -1,76 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="assets/img/google.png" />
     <style>
-        body {
-            background-color: #4b0082; /* ダークな紫色 */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            color: white; /* 白色のテキスト */
-        }
-        .header-container {
-            width: 80%;
-            max-width: 1000px;
-            background: rgba(255, 255, 255, 0.1); /* 半透明の背景 */
-            padding: 40px 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .header {
-            margin: 0;
-            font-size: 72px;
-            font-weight: bold;
-            color: #f3e5ab; /* 淡い黄色 */
-        }
-        .input {
-            margin-top: 10px;
-            padding: 20px;
-            font-size: 24px;
-            width: 100%;
-            max-width: 1000px;
-            border-radius: 8px;
-            border: 2px solid #ccc;
-            box-sizing: border-box;
-            text-align: center;
-            height: 60px;
-            background-color: #333; /* ダークな入力フィールド */
-            color: white; /* 白色のテキスト */
-        }
-        .input::placeholder {
-            color: #888;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="header-container">
-        <h1 class="header">Lightning Proxy</h1>
-        <input
-            type="text"
-            class="input"
-            id="searchInput"
-            name="search"
-            placeholder="Search or enter a URL"
-        />
-    </div>
+      body {
+        background-color: #6da6ff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
 
+      .header-container {
+        width: 80%;
+        max-width: 1000px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 40px 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header {
+        margin: 0;
+        font-size: 72px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .description {
+        font-size: 30px;
+        margin-top: 10px;
+        color: #333;
+      }
+
+      .input {
+        margin-top: 10px;
+        padding: 20px;
+        font-size: 24px;
+        width: 100%;
+        max-width: 1000px;
+        border-radius: 8px;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+        text-align: center;
+        height: 60px;
+      }
+
+      .input::placeholder {
+        color: #888;
+        text-align: center;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1 class="header">ちとせあめ プロキシ</h1>
+      <p class="description">By chito-jp</p>
+      <input
+        type="text"
+        class="input"
+        id="searchInput"
+        name="search"
+        placeholder="Enter a URL here..."
+      />
+      <script src="https://adm.shinobi.jp/s/e5937c119196b0511fa47e536e9bb07c"></script>
+    </div>
     <script src="./uv/uv.bundle.js"></script>
     <script src="./uv/uv.config.js"></script>
     <script src="./assets/register-sw.js"></script>
     <script src="./assets/script.js" defer></script>
-</body>
+  </body>
 </html>
