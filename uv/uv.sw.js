@@ -13,8 +13,8 @@
             }) {
                 let i;
                 try {
-                    if (!t.url.startsWith(location.origin + this.config.prefix)) return await fetch(t);
-                    console.log(t);
+                    if (!t.url.startsWith(location.origin + this.config.prefix)){console.log(t.url); return await fetch(t);}
+                    console.log(t.url);
                     let e = new p(this.config, this.address);
                     typeof this.config.construct == "function" && this.config.construct(e, "service");
                     let a = await e.cookie.db();
